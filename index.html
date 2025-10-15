@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Finder - Card Pack Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kevin Finder</h1>
+        </header>
+        
+        <div class="calculator">
+            <div class="form-group">
+                <label for="cardType">Card Size:</label>
+                <select id="cardType" onchange="calculateOptimal()">
+                    <option value="7">Poker (7 per row)</option>
+                    <option value="6">Tarot (6 per row)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="cardsPerPack">Cards per Pack:</label>
+                <input type="number" id="cardsPerPack" placeholder="e.g. 54" min="1" oninput="calculateOptimal()">
+            </div>
+            
+            <div class="results" id="results">
+                <div class="result-item">
+                    <h3>Recommendations</h3>
+                    <p>Select card type and enter cards per pack to see optimal sizing recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
